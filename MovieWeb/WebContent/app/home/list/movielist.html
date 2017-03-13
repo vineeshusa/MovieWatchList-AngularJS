@@ -1,0 +1,23 @@
+<div ng-cloak>
+	<div>
+	  <div>
+	  <div class="feature-box-large"><b>Movie Title</b></div>
+	  <div class="feature-box-large"><b>Ratings</b></div>
+	  <div class="feature-box"><b>Edit</b></div>
+	  <div class="feature-box"><b>Delete</b></div>
+	  </div>
+	  <div ng-repeat="movie in collector.movies">
+	  	<div class="cb">
+			<div ng-bind="movie.movieTitle" class="feature-box-large"></div>
+			<div ng-bind="movie.rattings" class="feature-box-large"></div>
+			<div class="feature-box">
+				<button type="submit" ui-sref="edit({title:movie.movieTitle})">Edit
+                </button>
+			</div>
+		  	<div class="feature-box">
+				<button type="submit" ui-sref="delete({title:movie.movieTitle})">Delete
+                </button>
+		  	</div>
+	  	</div>
+	</div>
+</div>

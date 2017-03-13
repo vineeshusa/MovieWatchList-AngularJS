@@ -1,0 +1,19 @@
+<div ng-cloak>
+  <div>
+	<form name="editForm" role="form" novalidate ng-submit="editor.update()" show-validation>
+	
+	   <div class="feature-box">Movie Title: </div>
+	   <div class="fl"><span ng-bind="editor.movie.movieTitle" /></div>
+		<div class="cb"/>
+		<div class="feature-box">Rating:</div>
+		<div class="feature-box">
+		<input type="text" ng-model="editor.movie.rattings"/></div>
+		<div class="cb"/>
+		<div class="feature-box">&nbsp;</div>
+		<div class="feature-box">
+			<button type="submit"  ng-disabled="form.$invalid" >Save</button> 
+		</div>
+	
+	</form>
+  </div>
+ </div>

@@ -1,0 +1,25 @@
+<div ng-cloak>
+  <div>
+	<form name="form" ng-submit="creator.addMovie()">
+		<span ng-if="creator.showMessage" >
+			<font color="red">Movie Already Exists!</font> 
+		</span>
+		<div class="feature-box">Movie Title: </div>
+		<div class="fl">
+			<input type="text" name="title" ng-model="creator.movie.movieTitle" 
+			required ng-maxlength="24"/>
+		</div>
+		<div class="cb"/>
+		<div class="feature-box">Rating:</div>
+		<div class="fl">
+			<input type="text" ng-model="creator.movie.rattings"/>
+		</div>
+		<div class="cb"/>
+		<div class="feature-box">&nbsp;</div>
+		<div class="fl">
+			<button type="submit"  ng-disabled="form.$invalid" >Add Movie</button> 
+		</div>
+    </div>
+	</form>
+  </div>
+</div>
